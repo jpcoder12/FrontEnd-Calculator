@@ -1,0 +1,46 @@
+* {
+    color: white;
+    
+}
+body {
+    background-color: rgb(8, 8, 8);
+    width: 100%;
+    height: 100%;
+}
+
+.calc-shell {
+    background-color: rgba(30, 30, 30, .4);
+    border: 2px solid rgb(155, 155, 155);
+    border-radius: 10px;
+    height: 35rem;
+    width: 33%;
+    margin-top: 10%;
+    margin-left: 33%;
+}
+
+.calc-btns {
+    background-color: rgba(184, 14, 14, 0.4);
+    width: 23%;
+    border-radius: 10px;
+    border: 2px solid rgb(120, 120, 120);
+}
+
+.io-row {
+    background-color: rgba(7, 7, 7, 0.4);
+    width: 100%;
+    height: 20%;
+    margin-bottom: 5px;
+}
+
+.btn-row {
+    width: 100%;
+    padding: 0;
+}
+
+#input {
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid rgb(157, 156, 156);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
