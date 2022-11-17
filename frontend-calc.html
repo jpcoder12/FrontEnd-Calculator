@@ -24,7 +24,7 @@
             </div>
             <div id="button-container">
                 <div class="button-row">
-                    <div class="button-container function">
+                    <div class="button-container function" onclick="clearOutput()">
                         <div class="button-text"><i class="fa-regular fa-trash-can"></i></div>
                     </div>
                     <div class="button-container function">
@@ -38,13 +38,13 @@
                     </div>
                 </div>
                 <div class="button-row">
-                    <div class="button-container number">
-                        <div class="button-text" onclick="setOutput(7)">7</div>
+                    <div class="button-container number" onclick="setOutput('7')">
+                        <div class="button-text">7</div>
                     </div>
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('8')">
                         <div class="button-text">8</div>
                     </div>
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('9')">
                         <div class="button-text">9</div>
                     </div>
                     <div class="button-container function">
@@ -52,13 +52,13 @@
                     </div>
                 </div>
                 <div class="button-row">
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('4')">
                         <div class="button-text">4</div>
                     </div>
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('5')">
                         <div class="button-text">5</div>
                     </div>
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('6')">
                         <div class="button-text">6</div>
                     </div>
                     <div class="button-container function">
@@ -66,13 +66,13 @@
                     </div>
                 </div>
                 <div class="button-row">
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('1')">
                         <div class="button-text">1</div>
                     </div>
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('2')">
                         <div class="button-text">2</div>
                     </div>
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('3')">
                         <div class="button-text">3</div>
                     </div>
                     <div class="button-container function">
@@ -81,9 +81,9 @@
                 </div>
                 <div class="button-row">
                     <div class="button-container function">
-                        <div class="button-text"></div>
+                        <div class="button-text"><i class="fa-solid fa-superscript"></i></div>
                     </div>
-                    <div class="button-container number">
+                    <div class="button-container number" onclick="setOutput('0')">
                         <div class="button-text">0</div>
                     </div>
                     <div class="button-container function">
