@@ -19,8 +19,15 @@
     display: flex;
 }
 
-.button {
+.button-container{
     border: 1px solid red;
     height: 100%;
     width: 72.5px;
+    align-items: center;
+}
+
+.button-text {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-family: 'Kanit', sans-serif;
 }
