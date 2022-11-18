@@ -83,6 +83,14 @@ body {
     background-color: rgba(214, 152, 44, .7);
 }
 
+#clear-button {
+    background-color: rgba(241, 89, 89, 0.4);
+}
+
+#clear-button:hover{
+    background-color: brown;
+}
+
 #message-row {
     width: 100%;
     background-color: rgba(0, 0, 0, .2);
