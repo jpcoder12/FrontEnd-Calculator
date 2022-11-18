@@ -23,3 +23,4 @@ As of right now, exponentiation and the ability to make negative numbers is not 
 * Visual Feedback for when a function button is keyed / pressed
 * Negative numbers
 * Exponents
+* Square Root Button

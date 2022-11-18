@@ -87,6 +87,8 @@ const calculator = () => {
 }
 }
 
+
+// Logic for key presses
 // https://stackoverflow.com/questions/1846599/how-to-find-out-what-character-key-is-pressed
 document.addEventListener('keydown', function(event) {
     let key = event.key; // "a", "1", "Shift", etc.
