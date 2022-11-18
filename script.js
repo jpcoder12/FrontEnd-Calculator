@@ -76,7 +76,7 @@ const calculator = () => {
     }
     // ensuring the answer fits inside the box
     if (answer.length > 14){
-        answer = Number(answer).toFixed(9)
+        answer = Number(answer).toFixed(4)
     }
     document.querySelector("#output-text").innerHTML = answer;
     document.querySelector("#preview-text").innerHTML = `${val1} ${mode} ${val2}`;
