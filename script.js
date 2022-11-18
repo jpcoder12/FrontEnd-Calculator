@@ -59,24 +59,16 @@ const calculator = () => {
     console.log('Calculating:', val1, mode, val2)
     if (mode == '+'){
         answer = String(Number(val1) + Number(val2))
-        document.querySelector("#output-text").innerHTML = answer
-        
-        
     } else if (mode == '-'){
         answer = String(Number(val1) - Number(val2));
-        document.querySelector("#output-text").innerHTML = answer;
-        
     }
     else if (mode == 'x'){
         answer = String(Number(val1) * Number(val2));
-        document.querySelector("#output-text").innerHTML = answer;
-        
     }
     else if (mode == '÷'){
         answer = String(Number(val1) / Number(val2));
-        document.querySelector("#output-text").innerHTML = answer;
-        
     }
+    document.querySelector("#output-text").innerHTML = answer;
     val1 = Number(answer)
     stage = 'primary'
     val2 = ''
@@ -86,7 +78,8 @@ const calculator = () => {
 // https://stackoverflow.com/questions/1846599/how-to-find-out-what-character-key-is-pressed
 document.addEventListener('keydown', function(event) {
     let key = event.key; // "a", "1", "Shift", etc.
-    let validKeyPress = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '^', '/', '*', '-', "+", 'Enter']
+    console.log(key)
+    let validKeyPress = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '^', '/', '*', '-', "+", 'Enter', 'Backspace']
     let found = validKeyPress.find(e => e == key)
     if (found){
         // check if key is number or one of the function presses
@@ -113,6 +106,11 @@ document.addEventListener('keydown', function(event) {
                 case 'Enter':
                     calculator()
                     break;
+                case 'Backspace':
+                    clearOutput()
+                    break;
+                default:
+                    null;
             }
         } else {
             setOutput(key)
