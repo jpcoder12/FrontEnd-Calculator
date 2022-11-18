@@ -1,6 +1,6 @@
 # FrontEnd-Calculator
  
-This is a basic function calculator with more features coming soon. You can click buttons or you can type with your keyboard. See controls below.
+This is a functioning calculator with more features coming soon. You can click buttons or you can type with your keyboard. See controls below.
 
 As of right now, exponentiation and the ability to make negative numbers is not available yet. 
 
