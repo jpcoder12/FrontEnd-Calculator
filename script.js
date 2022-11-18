@@ -16,13 +16,11 @@ const setOutput = (strVal) => {
         outputDisplay += strVal
         document.querySelector("#output-text").innerHTML = outputDisplay
     } 
-    
-    
 }
 
 const clearOutput = () => {
     // if the outputDisplay is already 0, then both variables to perform ops are cleared and the stage is set to primary
-    // if the outputDisplay is not clear, this function just clears the current output to 0.
+    // if the outputDisplay is not clear, this function just clears the current output to 0, and the first value is still added to calculation.
     if (outputDisplay == '0'){
         val1 = ''
         val2 = ''
@@ -84,3 +82,40 @@ const calculator = () => {
     val2 = ''
     console.log('after calc: ', val1)
 }
+
+// https://stackoverflow.com/questions/1846599/how-to-find-out-what-character-key-is-pressed
+document.addEventListener('keydown', function(event) {
+    let key = event.key; // "a", "1", "Shift", etc.
+    let validKeyPress = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '^', '/', '*', '-', "+", 'Enter']
+    let found = validKeyPress.find(e => e == key)
+    if (found){
+        // check if key is number or one of the function presses
+        if (isNaN(key)){
+            switch (key){
+                case '.':
+                    setOutput(key)
+                    break;
+                case '/':
+                    changeMode('÷')
+                    break;
+                case '^':
+                    console.log('Feature not available yet.')
+                    break;
+                case '*':
+                    changeMode('x')
+                    break;
+                case '+':
+                    changeMode('+')
+                    break;
+                case '-':
+                    changeMode('-')
+                    break;
+                case 'Enter':
+                    calculator()
+                    break;
+            }
+        } else {
+            setOutput(key)
+        }
+    }
+})
