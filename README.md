@@ -17,3 +17,7 @@ As of right now, exponentiation and the ability to make negative numbers is not 
     - Once to clear current input, twice to clear entire calculation
 
 
+## Coming Soon
+* Visual Feedback for when a function button is keyed / pressed
+* Negative numbers
+* Exponents
