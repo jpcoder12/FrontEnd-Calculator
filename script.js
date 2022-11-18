@@ -74,6 +74,10 @@ const calculator = () => {
     else if (mode == '÷'){
         answer = String(Number(val1) / Number(val2));
     }
+    // ensuring the answer fits inside the box
+    if (answer.length > 14){
+        answer = Number(answer).toFixed(9)
+    }
     document.querySelector("#output-text").innerHTML = answer;
     document.querySelector("#preview-text").innerHTML = `${val1} ${mode} ${val2}`;
     val1 = Number(answer)
