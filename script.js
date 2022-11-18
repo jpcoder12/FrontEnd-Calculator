@@ -3,6 +3,7 @@ let val1 = ''
 let val2 = ''
 let outputDisplay = ''
 let answer = ''
+stage = 'primary'
 // mode dictates what to do when a function button is clicked. (2 modes: primary & secondary)
 let mode = '' // whether it's + - x or /
 const setOutput = (strVal) => {
@@ -40,15 +41,18 @@ const changeMode = inputmode => {
     // if stage is primary, the mode is changed and val1 is set to the current output displayed
     // if stage is secondary, val1 becomes what the current mode's calc would be and we remain on secondary stage. 
     mode = inputmode
-    if (val2 != ''){
-        console.log('additonal calculation...')
+    console.log(stage)
+    if (stage == 'primary'){
+        val1 = Number(document.querySelector("#output-text").innerHTML)
+        console.log(val1)
+        stage = 'secondary'
+    } else if (stage = 'secondary'){
         calculator()
         val1 = Number(answer)
-    } else {
-        val1 = Number(outputDisplay)
+        outputDisplay = String(val1)
+        stage = 'primary'
     }
-    val2 = ''
-    console.log('Change Mode', val1, mode, val2)
+    
     outputDisplay = ''
 }
 
@@ -58,23 +62,25 @@ const calculator = () => {
     if (mode == '+'){
         answer = String(Number(val1) + Number(val2))
         document.querySelector("#output-text").innerHTML = answer
-        val1 = Number(answer)
+        
         
     } else if (mode == '-'){
         answer = String(Number(val1) - Number(val2));
         document.querySelector("#output-text").innerHTML = answer;
-        val1 = Number(answer)
+        
     }
     else if (mode == '×'){
         answer = String(Number(val1) * Number(val2));
         document.querySelector("#output-text").innerHTML = answer;
-        val1 = Number(answer)
+        
     }
     else if (mode == '÷'){
         answer = String(Number(val1) / Number(val2));
         document.querySelector("#output-text").innerHTML = answer;
-        val1 = number(answer)
+        
     }
+    val1 = Number(answer)
+    stage = 'primary'
     val2 = ''
     console.log('after calc: ', val1)
 }
