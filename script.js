@@ -26,6 +26,7 @@ const clearOutput = () => {
         val2 = ''
         mode = ''
         answer = ''
+        document.querySelector("#preview-text").innerHTML = `${val1} ${mode} ${val2}`;
         document.querySelector("#output-text").innerHTML = outputDisplay
     } 
     else if (outputDisplay != '0'){
@@ -55,6 +56,11 @@ const changeMode = inputmode => {
 }
 
 const calculator = () => {
+    if (stage == 'primary'){
+        mode = '='
+        val1 = Number(document.querySelector("#output-text").innerHTML)
+        document.querySelector("#preview-text").innerHTML = `${val1} ${mode} ${val1}`;
+    } else {
     val2 = Number(outputDisplay)
     console.log('Calculating:', val1, mode, val2)
     if (mode == '+'){
@@ -69,10 +75,12 @@ const calculator = () => {
         answer = String(Number(val1) / Number(val2));
     }
     document.querySelector("#output-text").innerHTML = answer;
+    document.querySelector("#preview-text").innerHTML = `${val1} ${mode} ${val2}`;
     val1 = Number(answer)
     stage = 'primary'
     val2 = ''
     console.log('after calc: ', val1)
+}
 }
 
 // https://stackoverflow.com/questions/1846599/how-to-find-out-what-character-key-is-pressed

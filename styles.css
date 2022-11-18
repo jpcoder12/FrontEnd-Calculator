@@ -1,5 +1,7 @@
 body {
     background-color: rgb(0, 0, 0);
+    background-image: url(IMG_7611.jpg);
+    background-size: 2000px;
 }
 #calc-container {
     width: 300px;
@@ -10,6 +12,7 @@ body {
     border-radius: 8px;
     padding: 3px;
     background-color: rgba(102, 167, 202, .6);
+    box-shadow: 3px 10px 5px rgba(0, 0, 0, .2);
 }
 
 #output-row {
@@ -29,7 +32,7 @@ body {
 
 .button-container{
     border: 1px solid rgb(112, 111, 111);
-    background-color: rgba(130, 145, 171, 0.4);
+    background-color: rgba(130, 145, 171, .7);
     border-radius: 3px;
     height: 100%;
     width: 70.5px;
@@ -50,6 +53,7 @@ body {
 #preview-text {
     font-size: 1rem;
     margin-bottom: 10px;
+    padding-right: 3px;
     height: 20px;
     text-align: right;
     font-family: 'Sono', sans-serif;
@@ -59,7 +63,8 @@ body {
     font-size: 30px;
     text-align: right;
     font-family: 'Sono', sans-serif;
-    color: rgb(180, 180, 180);
+    color: rgb(212, 212, 212);
+    padding-right: 3px;
 }
 
 #title-row {
@@ -71,9 +76,19 @@ body {
 }
 
 .number {
-    background-color: rgba(171, 199, 211, 0.4);
+    background-color: rgba(171, 199, 211, 0.7);
     
 }
 .function {
-    background-color: rgba(214, 152, 44, .4);
+    background-color: rgba(214, 152, 44, .7);
+}
+
+#message-row {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    color: white;
+    border-radius: 8px;
+    height: 50px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
 }
