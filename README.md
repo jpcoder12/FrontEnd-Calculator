@@ -1,7 +1,19 @@
 # FrontEnd-Calculator
  
-You can click buttons or you can type with your keyboard.
+This is a basic function calculator with more features coming soon. You can click buttons or you can type with your keyboard. See controls below.
 
 As of right now, exponentiation and the ability to make negative numbers is not available yet. 
 
-**Backspace once to clear the value, and twice to clear the entire calculation**
+
+
+## Key Press Controls
+* ('0-9') Enter a number
+* '\*'    Multiplication
+* '/'     Division
+* '+'     Addition
+* '-'     Subtraction
+* 'Enter' Calculate Answer
+* 'Backspace' 
+    - Once to clear current input, twice to clear entire calculation
+
+
