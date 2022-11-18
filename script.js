@@ -69,7 +69,7 @@ const calculator = () => {
         document.querySelector("#output-text").innerHTML = answer;
         
     }
-    else if (mode == '×'){
+    else if (mode == 'x'){
         answer = String(Number(val1) * Number(val2));
         document.querySelector("#output-text").innerHTML = answer;
         
