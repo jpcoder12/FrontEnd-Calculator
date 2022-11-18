@@ -4,7 +4,7 @@
  
 This is a functioning calculator with more features coming soon. You can click buttons or you can type with your keyboard. See controls below.
 
-As of right now, exponentiation and the ability to make negative numbers is not available yet. 
+As of right now, exponentiation, square root, and the ability to make negative numbers is not available yet. 
 
 Fonts from Google Fonts. Icons from Font-Awesome.
 
