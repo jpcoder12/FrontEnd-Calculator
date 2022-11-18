@@ -4,31 +4,18 @@ let val2 = ''
 let outputDisplay = ''
 let answer = ''
 // mode dictates what to do when a function button is clicked. (2 modes: primary & secondary)
-let stage = 'primary' // primary = first number, secondary = second number in the operation
 let mode = '' // whether it's + - x or /
-const setOutput = (num) => {
+const setOutput = (strVal) => {
     // If this is the first set of numbers, append to outputDisplay. 
     // you cannot go beyond 15 chars so it will just not take your selected button's input
-    console.log(stage, mode)
-    if (stage == 'primary'){
-        if (outputDisplay.length <= 14){
-            if (outputDisplay == '0'){
-                outputDisplay = ''
-            }
-            outputDisplay += num
-            document.querySelector("#output-text").innerHTML = outputDisplay
-        } 
-    }
-    else if (stage == 'secondary'){
-
-        if (outputDisplay.length <= 14){
-            if (outputDisplay == '0'){
-                outputDisplay = ''
-            }
-            outputDisplay += num
-            document.querySelector("#output-text").innerHTML = outputDisplay
+    if (outputDisplay.length <= 14){
+        if (outputDisplay == '0'){
+            outputDisplay = ''
         }
-    }
+        outputDisplay += strVal
+        document.querySelector("#output-text").innerHTML = outputDisplay
+    } 
+    
     
 }
 
@@ -38,43 +25,56 @@ const clearOutput = () => {
     if (outputDisplay == '0'){
         val1 = ''
         val2 = ''
-        stage = 'primary'
         mode = ''
+        answer = ''
         document.querySelector("#output-text").innerHTML = outputDisplay
     } 
     else if (outputDisplay != '0'){
         outputDisplay = '0'
         document.querySelector("#output-text").innerHTML = outputDisplay
     }
+    console.log('Clear', val1, mode, val2)
 }
 
 const changeMode = inputmode => {
     // if stage is primary, the mode is changed and val1 is set to the current output displayed
     // if stage is secondary, val1 becomes what the current mode's calc would be and we remain on secondary stage. 
-    if (stage == 'primary'){
-        stage = 'secondary'
-        mode = inputmode
-        console.log('mode changed to +')
+    mode = inputmode
+    if (val2 != ''){
+        console.log('additonal calculation...')
+        calculator()
+        val1 = Number(answer)
+    } else {
         val1 = Number(outputDisplay)
-        outputDisplay = '0'
-    } else if (stage == 'secondary'){
-        if (mode == '='){
-            calculator()
-        }
-        
     }
+    val2 = ''
+    console.log('Change Mode', val1, mode, val2)
+    outputDisplay = ''
 }
 
 const calculator = () => {
-    switch (mode){
-        case '+':
-            val2 = outputDisplay
-            answer = String(Number(val1) + Number(val2))
-            document.querySelector("#output-text").innerHTML = answer
-            state = 'primary'
-            break
-        default:
-            null
-            
+    val2 = Number(outputDisplay)
+    console.log('Calculating:', val1, mode, val2)
+    if (mode == '+'){
+        answer = String(Number(val1) + Number(val2))
+        document.querySelector("#output-text").innerHTML = answer
+        val1 = Number(answer)
+        
+    } else if (mode == '-'){
+        answer = String(Number(val1) - Number(val2));
+        document.querySelector("#output-text").innerHTML = answer;
+        val1 = Number(answer)
     }
+    else if (mode == '×'){
+        answer = String(Number(val1) * Number(val2));
+        document.querySelector("#output-text").innerHTML = answer;
+        val1 = Number(answer)
+    }
+    else if (mode == '÷'){
+        answer = String(Number(val1) / Number(val2));
+        document.querySelector("#output-text").innerHTML = answer;
+        val1 = number(answer)
+    }
+    val2 = ''
+    console.log('after calc: ', val1)
 }

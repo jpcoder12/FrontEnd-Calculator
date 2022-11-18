@@ -33,8 +33,8 @@
                     <div class="button-container function">
                         <div class="button-text"></div>
                     </div>
-                    <div class="button-container function">
-                        <div class="button-text">÷</div>
+                    <div class="button-container function" onclick="changeMode('÷')">
+                        <div class="button-text"><i class="fa-solid fa-divide"></i></div>
                     </div>
                 </div>
                 <div class="button-row">
@@ -47,8 +47,8 @@
                     <div class="button-container number" onclick="setOutput('9')">
                         <div class="button-text">9</div>
                     </div>
-                    <div class="button-container function">
-                        <div class="button-text">×</div>
+                    <div class="button-container function" onclick="changeMode('×')">
+                        <div class="button-text"><i class="fa-solid fa-xmark"></i></div>
                     </div>
                 </div>
                 <div class="button-row">
@@ -61,8 +61,8 @@
                     <div class="button-container number" onclick="setOutput('6')">
                         <div class="button-text">6</div>
                     </div>
-                    <div class="button-container function">
-                        <div class="button-text">-</div>
+                    <div class="button-container function" onclick="changeMode('-')">
+                        <div class="button-text"><i class="fa-solid fa-minus"></i></div>
                     </div>
                 </div>
                 <div class="button-row">
@@ -76,7 +76,7 @@
                         <div class="button-text">3</div>
                     </div>
                     <div class="button-container function" onclick="changeMode('+')">
-                        <div class="button-text">+</div>
+                        <div class="button-text"><i class="fa-solid fa-plus"></i></div>
                     </div>
                 </div>
                 <div class="button-row">
@@ -90,7 +90,7 @@
                         <div class="button-text"></div>
                     </div>
                     <div class="button-container function" onclick="calculator()">
-                        <div class="button-text">=</div>
+                        <div class="button-text"><i class="fa-solid fa-equals"></i></div>
                     </div>
                 </div>
             </div>
