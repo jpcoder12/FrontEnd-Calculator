@@ -6,7 +6,7 @@ This is a functioning calculator with more features coming soon. You can click b
 
 As of right now, exponentiation and the ability to make negative numbers is not available yet. 
 
-
+Fonts from Google Fonts. Icons from Font-Awesome.
 
 ## Key Press Controls
 * ('0-9') Enter a number
@@ -23,4 +23,4 @@ As of right now, exponentiation and the ability to make negative numbers is not 
 * Visual Feedback for when a function button is keyed / pressed
 * Negative numbers
 * Exponents
-* Square Root Button
+* Square Root
